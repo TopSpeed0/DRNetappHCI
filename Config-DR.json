@@ -1,0 +1,80 @@
+{
+    "resources": [
+        {
+            "VC": [
+                {
+                    "Source": "SourceVC.Domian.local",
+                    "Destination": "thcpvc01.Domian.local"
+                }
+            ],
+            "Cluster": [
+                {
+                    "Source": "Source-AccessGroup-Cluster-01-Source",
+                    "Destination": "Source-AccessGroup-Cluster-01-Destination"
+                }
+            ],
+            "Datacenter": [
+                {
+                    "Source": "Source-AccessGroup-Datacenter-01-Source",
+                    "Destination": "Source-AccessGroup-Datacenter-01-Destination"
+                }
+            ],
+            "Datastore": [
+                {
+                    "Source":"Test-DR-Datastore-01-Destination",
+                    "Destination":"Test-DR-Datastore-01-Source"
+                },
+                {
+                    "Source":"Test-DR-Datastore-02-Destination",
+                    "Destination":"Test-DR-Datastore-02-Source"
+                },
+                {
+                    "Source":"Test-DR-Datastore-03-Destination",
+                    "Destination":"Test-DR-Datastore-03-Source"
+                }
+            ],
+            "AccessGroup": [
+                {
+                    "Source": "Source-AccessGroup",
+                    "Destination": "Destination-AccessGroup"
+                }
+            ] ,
+            "Suffix": [
+                {
+                    "Source": "-Source",
+                    "Destination": "-Destination"
+                }
+            ] ,
+            "MVIP": [
+                {
+                    "Source": "192.168.1.1",
+                    "Destination": "172.168.1.1"
+                }
+            ] 
+        }
+    ],
+    "VMware": [
+        {
+            "user":  "administrator@vsphere.local",
+            "keyFile":  "c:\\VMware\\aes.key",
+            "pswdFile":  "c:\\VMware\\pswd.txt"
+        }
+    ],
+    "SolidFire": [
+        {
+            "SolidUser":  "administrator",
+            "keyFileSolid":  "c:\\SolidFire\\aes.key",
+            "pswdFileSolid":  "c:\\SolidFire\\pswd.txt"
+        }
+    ],
+    "readWrite": [
+        {
+            "Access":  "readWrite"
+        }
+    ],
+    "replicationTarget": [
+        {
+            "Access":  "replicationTarget"
+        }
+    ]
+}
