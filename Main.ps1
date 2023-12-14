@@ -3,17 +3,6 @@ $CWD = [Environment]::CurrentDirectory
 Set-Location $CWD
 Start-Transcript -Path C:\temp\$(Get-Random).log
 
-$CWD | ForEach-Object {
-    Get-ChildItem -Path (Join-Path $PSScriptRoot $_) -Filter '*.ps1' | ForEach-Object {
-       $pathToFile = $_.FullName
-       try {
-          . $pathToFile
-       } catch {
-          Write-Error -Message "Failed to import file $($pathToFile): $_"
-       }
-    }
- }
-
 # Module imports
 Set-PowerCLIConfiguration -Scope AllUsers -ParticipateInCEIP $false -Confirm:$false | out-null
 # Clear last Load of the HciVMwareDR if we implement a fix
