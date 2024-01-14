@@ -4,33 +4,33 @@
             "VC": [
                 {
                     "Source": "SourceVC.Domian.local",
-                    "Destination": "thcpvc01.Domian.local"
+                    "Destination": "DestinationVC.Domian.local"
                 }
             ],
             "Cluster": [
                 {
                     "Source": "Source-AccessGroup-Cluster-01-Source",
-                    "Destination": "Source-AccessGroup-Cluster-01-Destination"
+                    "Destination": "Destination-AccessGroup-Cluster-01-Destination"
                 }
             ],
             "Datacenter": [
                 {
                     "Source": "Source-AccessGroup-Datacenter-01-Source",
-                    "Destination": "Source-AccessGroup-Datacenter-01-Destination"
+                    "Destination": "Destination-AccessGroup-Datacenter-01-Destination"
                 }
             ],
             "Datastore": [
                 {
-                    "Source":"Test-DR-Datastore-01-Destination",
+                    "Source":"Test-DR-Datastore-01-Source",
                     "Destination":"Test-DR-Datastore-01-Source"
                 },
                 {
-                    "Source":"Test-DR-Datastore-02-Destination",
-                    "Destination":"Test-DR-Datastore-02-Source"
+                    "Source":"Test-DR-Datastore-02-Source",
+                    "Destination":"Test-DR-Datastore-02-Destination"
                 },
                 {
-                    "Source":"Test-DR-Datastore-03-Destination",
-                    "Destination":"Test-DR-Datastore-03-Source"
+                    "Source":"Test-DR-Datastore-03-Source",
+                    "Destination":"Test-DR-Datastore-03-Destination"
                 }
             ],
             "AccessGroup": [
