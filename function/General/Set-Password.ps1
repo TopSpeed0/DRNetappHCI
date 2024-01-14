@@ -5,10 +5,10 @@ function Set-EncryptedPswd {
         $config
     )
     # File locations
-    if (!$keyFile) {$keyFile = 'c:\Users\ybohadana\OneDrive - COGNYTE\Documents\code\Cognyte\VMware\aes.key'}
-    if (!$pswdFile) {$pswdFile = 'c:\\Users\ybohadana\\OneDrive - COGNYTE\\Documents\\code\\Cognyte\VMware\pswd.txt'}
+    if (!$keyFile) {$keyFile = 'c:\\Code\\VMware\\aes.key'}
+    if (!$pswdFile) {$pswdFile = 'c:\\Code\\VMware\\pswd.txt'}
     if (!$config) {
-        $config = 'C:\Users\ybohadana\OneDrive - COGNYTE\Documents\WindowsPowerShell\Modules\HciVMwareDR\Config-p.json'
+        $config = 'C:\\Code\\VMware\\\Config-p.json'
     }
     Write-host "Please remember to change this config:$config, keyFile:$keyFile, pswdFile:$pswdFile predefined location on the script !" -ForegroundColor Yellow
 
