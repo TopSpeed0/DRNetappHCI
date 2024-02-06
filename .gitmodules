@@ -1,0 +1,4 @@
+[submodule "function"]
+	path = function
+	url = https://github.com/TopSpeed0/HCIDR_function.git
+	branch = main
