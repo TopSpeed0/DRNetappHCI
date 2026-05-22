@@ -3,8 +3,8 @@
         {
             "VC": [
                 {
-                    "Source": "SourceVC.Domian.local",
-                    "Destination": "DestinationVC.Domian.local"
+                    "Source": "SourceVC.Domain.local",
+                    "Destination": "DestinationVC.Domain.local"
                 }
             ],
             "Cluster": [

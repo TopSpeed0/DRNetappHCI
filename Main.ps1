@@ -38,8 +38,8 @@ $VMwareEncryptedPswd = Get-Content -Path $config.VMware.pswdFile | ConvertTo-Sec
 $global:VMwareCredential = New-Object System.Management.Automation.PSCredential($config.VMware.user, $VMwareEncryptedPswd)
 
 # SolidFire Credential
-$SoldiFireEncryptedPswd = Get-Content -Path $config.SolidFire.pswdFileSolid | ConvertTo-SecureString -Key (Get-Content -Path $config.SolidFire.keyFileSolid)
-$global:SFCredential = New-Object System.Management.Automation.PSCredential($config.SolidFire.SolidUser, $SoldiFireEncryptedPswd)
+$SolidFireEncryptedPswd = Get-Content -Path $config.SolidFire.pswdFileSolid | ConvertTo-SecureString -Key (Get-Content -Path $config.SolidFire.keyFileSolid)
+$global:SFCredential = New-Object System.Management.Automation.PSCredential($config.SolidFire.SolidUser, $SolidFireEncryptedPswd)
 ####################################################################
 
 # remove last VMs Configuration or load it
@@ -56,7 +56,7 @@ if ( $RemoveConfig -eq 'No') {
             Write-Error "        FAILED: to load last Config: ERROR Message:$($_.Exception.Message)"
         }
     } else {
-        Write-Host "        Last VMlist Config allready loadded" -f Green 
+        Write-Host "        Last VMlist Config already loaded" -f Green 
     }
 }
 ####################################################################
@@ -76,9 +76,9 @@ function Menu {
         # switch Case
         switch ($scenario) 
         {
-            # 1 TestFaildover
+            # 1 TestFailover
             '1' {
-                .\Scripts\TestFaildover.ps1 -config $global:config -VMwareCredential $VMwareCredential -SFCredential $SFCredential
+                .\Scripts\TestFailover.ps1 -config $global:config -VMwareCredential $VMwareCredential -SFCredential $SFCredential
             }
             # 2 FailedOver
             '2' {
